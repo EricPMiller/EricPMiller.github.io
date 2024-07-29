@@ -1,0 +1,358 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  :root{
+    --fs-sm: clamp(0.8rem, 0.06vi + 0.79rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.13vi + 0.97rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.24vi + 1.2rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 0.39vi + 1.48rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 0.61vi + 1.83rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 0.93vi + 2.25rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 1.39vi + 2.77rem, 5rem);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: block;
+    font-family: "trebuchet ms", sans-serif;
+    background-image: linear-gradient(transparent, transparent 100vh, hsl(247, 60%, 21%) 100vh, black 85%), radial-gradient(75% 100vh at 0% 0%, hsl(190, 50%, 51%), hsl(247, 60%, 21%));
+  }
+  /*linear-gradient(hsl(190, 50%, 51%), hsl(247, 60%, 21%) 100vh, black)*/
+  /*radial-gradient(75% 100% at 0% 50%, hsl(190, 50%, 51%), hsl(247, 60%, 21%))*/
+  
+  header {
+    position: fixed;
+    padding: 0 0.5em;
+    top: 0;
+    height: clamp(50px, 7.5vh, 100px);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background: rgb(25, 25, 25);
+  }
+  
+  .logo {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: var(--fs-xxl);
+    font-weight: bold;
+    margin-left: 0.5em;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: -.2em;
+  }
+  
+  nav {
+    position: relative;
+    font-size: var(--fs-lg);
+    font-weight: bold;
+    align-items: center;
+    height: 75px;
+  }
+  
+  #navbar {
+    top: 0;
+    display: flex;
+    min-height: 75px;
+  }
+  
+  nav > ul {
+    width: 30vw;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin-right: 70px; 
+  }
+  
+  li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  a {
+    color: hsl(190, 50%, 51%);
+    text-decoration: none;
+    width: auto;
+  }
+  
+  #welcome-section {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+  }
+  
+  .landing {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+  
+  h1 {
+    font-size: var(--fs-xxxl);
+    font-weight: bold;
+    padding: 25vh 5vw;
+  }
+  
+  .landing p {
+    font-size: var(--fs-xl);
+    margin-left: 65vw;
+    color: white;
+  }
+  
+  #projects {
+    padding-bottom: 3em;
+  }
+  
+  h2 {
+    font-size: var(--fs-xl);
+    padding: 3rem;
+    color: hsl(190, 50%, 51%);
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .project-tile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .project-tile {
+    min-width: 100%;
+  }
+  
+  .project-tile p {
+    display: block;
+    text-align: center;
+    color: white;
+    height: 2em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: var(--fs-lg);
+  }
+  
+  .project-thumbnail {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  
+  }
+  
+  #about {
+    padding: 6em auto;
+    padding-bottom: 1.5em;
+    display: block;
+    color: white;
+  }
+  
+  .grid {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 1280px;
+    align-items: center;
+  }
+  
+  .about-me {
+    font-size: var(--fs-md);
+    text-align: justify;
+    width: 50%;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    }
+  
+  i {
+    color: hsl(190, 50%, 51%);
+    font-size: var(--fs-md);
+    margin: 1em 0;
+  }
+  
+  .accent {
+    color: hsl(190, 50%, 51%);
+    font-weight: bold;
+  }
+  
+  .text {
+    color: white;
+    font-family: "trebuchet ms";
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .logo {
+      font-size: var(--fs-xxl);
+    }
+    nav {
+      font-size: var(--fs-lg);
+    }
+    h1 {
+      font-size: var(--fs-xxxl);
+    }
+    .landing p {
+      font-size: var(--fs-lg);
+    }
+    h2{
+      font-size: var(--fs-lg);
+    }
+    .project-tile p {
+      font-size: var(--fs-lg);
+    }
+    .project-tile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: 70%;
+    }
+  }
+   
+  @media only screen and (max-width: 768px) {
+    .logo {
+      font-size: var(--fs-lg);
+    }
+    nav {
+      font-size: var(--fs-base);
+    }
+    h1 {
+      font-size: var(--fs-xxl);
+    }
+    .landing p {
+      font-size: var(--fs-md);
+    }
+    h2{
+      font-size: var(--fs-lg);
+    }
+    .project-tile p {
+      font-size: var(--fs-base);
+    }
+    .project-tile-grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: 75%;
+    }
+    .grid {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .about-me {
+      font-size: var(--fs-md);
+      width: 80%;
+    }
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+    }
+    i {
+      font-size: var(--fs-md);
+    }
+  }
+  
+  @media only screen and (max-width: 425px) {
+    .logo {
+      font-size: var(--fs-lg);
+    }
+    nav {
+      font-size: var(--fs-sm);
+    }
+    h1 {
+      font-size: var(--fs-xl);
+    }
+    .landing p {
+      font-size: var(--fs-base);
+    }
+    h2{
+      font-size: var(--fs-lg);
+    }
+    .project-tile p {
+      font-size: var(--fs-md);
+    }
+    .project-tile-grid {
+      grid-template-columns: repeat(1, 1fr);
+      width: 80%;
+    }
+    .grid {
+      flex-direction: column;
+      width: 85%;
+      margin: 0 auto;
+    }
+    .about-me {
+      font-size: var(--fs-base);
+      width: 85%;
+    }
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      width: 85%;
+    }
+    i {
+      font-size: var(--fs-base);
+    }
+  }
+  
+  @media only screen and (max-width: 375px) {
+    .logo {
+      font-size: var(--fs-md);
+    }
+    nav {
+      font-size: var(--fs-sm);
+    }
+    h1 {
+      font-size: var(--fs-xl);
+    }
+    .landing p {
+      font-size: var(--fs-base);
+    }
+    h2{
+      font-size: var(--fs-md);
+    }
+    .project-tile p {
+      font-size: var(--fs-md);
+    }
+    .grid {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .about-me {
+      font-size: var(--fs-base);
+       width: 90%;
+    }
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+    }
+    i {
+      font-size: var(--fs-base);
+    }
+  }
